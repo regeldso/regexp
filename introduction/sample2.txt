@@ -1,0 +1,16 @@
+private const string MatchSuccess = "{0} @{1}:{2}";
+void Main(string[] args)
+{
+	var pattern = "cat";
+	var subject = "catcat";
+	var regex = new Regex(pattern);
+	var match = regex.Match(subject);
+	if (match.Success)
+	{
+		Console.WriteLine(MatchSuccess, match.Success, match.Index, match.Length);
+	}
+	else
+	{
+		Console.WriteLine(match.Success);
+	}
+}
