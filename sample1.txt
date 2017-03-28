@@ -1,0 +1,8 @@
+void Main(string[] args)
+{
+	var pattern = "cat";
+	var subject = "not car";
+	var regex = new Regex(pattern);
+	var match = regex.Match(subject);
+	Console.WriteLine(match.Success);
+}
